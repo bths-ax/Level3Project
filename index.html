@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Slider Puzzle</title>
+		<link rel="stylesheet" href="./styles.css">
+	</head>
+
+	<body>
+		<header>
+			<h1>Slider Puzzle</h1>
+			<h2>Put the numbers in order by moving the tiles around</h2>
+			<hr>
+		</header>
+
+		<form id="controls">
+			<label><input type="radio" name="difficulty" value="Easy"><span>Easy</span></label>
+			<label><input type="radio" name="difficulty" value="Medium"><span>Medium</span></label>
+			<label><input type="radio" name="difficulty" value="Hard"><span>Hard</span></label>
+			<br>
+			<input type="button" value="Start">
+		</form>
+		<h3 id="moves">Moves: 0</h3>
+
+		<div id="board">
+			<div class="tile" id="0"></div>
+			<div class="tile tile-fill" id="1"><span>1</span></div>
+			<div class="tile tile-fill" id="2"><span>2</span></div>
+			<div class="tile tile-fill" id="3"><span>3</span></div>
+			<div class="tile tile-fill" id="4"><span>4</span></div>
+			<div class="tile tile-fill" id="5"><span>5</span></div>
+			<div class="tile tile-fill" id="6"><span>6</span></div>
+			<div class="tile tile-fill" id="7"><span>7</span></div>
+			<div class="tile tile-fill" id="8"><span>8</span></div>
+			<div class="tile tile-fill" id="9"><span>9</span></div>
+			<div class="tile tile-fill" id="10"><span>10</span></div>
+			<div class="tile tile-fill" id="11"><span>11</span></div>
+			<div class="tile tile-fill" id="12"><span>12</span></div>
+			<div class="tile tile-fill" id="13"><span>13</span></div>
+			<div class="tile tile-fill" id="14"><span>14</span></div>
+			<div class="tile tile-fill" id="15"><span>15</span></div>
+		</div>
+
+		<script src="./script.js"></script>
+	</body>
+</html>

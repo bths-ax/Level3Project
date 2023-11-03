@@ -1,0 +1,136 @@
+:root {
+	--fg-normal: #E0DDCF;
+	--fg-light: #F1F0EA;
+	--fg-accent: #7B6680;
+	--bg-normal: #2D232E;
+	--bg-light: #534B52;
+}
+
+body {
+	background-color: var(--bg-normal);
+	color: var(--fg-normal);
+
+	font-family: Verdana, sans-serif;
+	text-align: center;
+
+	margin: 0;
+}
+
+h1, h2, h3 {
+	margin: 0;
+}
+
+h1 {
+	color: var(--fg-light);
+	font-size: 2em;
+	line-height: 2.2em;
+}
+
+h2 {
+	font-size: 1.5em;
+	font-weight: normal;
+	line-height: 1.5em;
+}
+
+h3 {
+	font-size: 1.3em;
+	font-weight: normal;
+	line-height: 1.3em;
+}
+
+hr {
+	border-width: 1px;
+	border-color: var(--fg-normal);
+}
+
+#controls label {
+	display: inline-flex;
+	justify-content: center;
+	justify-items: center;
+}
+
+#controls label > span {
+	padding-left: 0.25em;
+	margin: auto;
+}
+
+#controls input[type=radio] {
+	-webkit-appearance: none; /* i hate you chrome */
+	appearance; none;
+	background-color: var(--fg-accent);
+	border: 5px solid var(--fg-accent);
+	border-radius: 5px;
+}
+
+#controls input[type=radio]::before {
+	content: "";
+	display: block;
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 5px;
+
+	background-color: var(--fg-accent);
+	transition: 0.1s linear;
+}
+
+#controls input[type=radio]:checked::before {
+	background-color: var(--fg-light);
+}
+
+#controls input[type=button] {
+	border: none;
+	border-radius: 5px;
+	background-color: var(--fg-accent);
+	color: var(--fg-light);
+	padding: 0.5em 2em;
+	margin: 1em;
+	font-size: 1.2em;
+	cursor: pointer;
+}
+
+#board {
+	position: relative;
+	width: 50vw;
+	height: 50vw;
+	margin: 1em auto;
+	padding: 5px;
+
+	background-color: var(--bg-light);
+	border-radius: 5px;
+
+	/* Thanks grid for having no order animation capabilities! */
+	/*display: grid;
+	grid-template-rows: auto auto auto auto;
+	grid-template-columns: auto auto auto auto;
+	gap: 10px;*/
+}
+
+.tile {
+	position: absolute;
+	width: calc(50vw / 4 - 10px);
+	height: calc(50vw / 4 - 10px);
+
+	display: flex;
+	justify-items: center;
+	justify-content: center;
+}
+
+.tile-fill {
+	background-color: var(--bg-normal);
+	border-radius: 7px;
+
+	cursor: pointer;
+	transition:
+		filter 100ms linear,
+		top 75ms ease-out,
+		left 75ms ease-out;
+}
+
+.tile-fill:hover {
+	filter: brightness(115%);
+}
+
+.tile > span {
+	font-size: 6vw;
+	margin: auto;
+}
