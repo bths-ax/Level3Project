@@ -112,6 +112,12 @@ for (let [tileValue, tile] of tiles.entries()) {
 			let [tileRow, tileCol] = game.getTilePosition(tileValue);
 			game.makeMove(tileRow, tileCol, true);
 			display();
+			if (game.checkSolved()) {
+				gameStarted = false;
+				gameActive = false;
+				// Timeout because website freezes while an alert is open (Give it time to animate first)
+				setTimeout(() => alert(`You won in ${game.moves} moves!`), 150);
+			}
 		}
 	});
 }
